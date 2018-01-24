@@ -9,3 +9,29 @@ navigator
     .catch(function(err) { 
         console.log("oops1"); 
     });
+
+    $(function() {
+        $('#sepia').change(function() {
+            if ($(this).prop('checked')) {
+                $('#mirror').addClass('sepia')
+            } else {
+                $('#mirror').removeClass('sepia')
+            }
+        })
+
+        $('#night').change(function() {
+            if ($(this).prop('checked')) {
+                $('#mirror').addClass('bright')
+            } else {
+                $('#mirror').removeClass('bright')
+            }
+        })
+
+        $('#blur').change(function() {
+            if ($(this).prop('checked')) {
+                $('#mirror').addClass('blur')
+            } else {
+                $('#mirror').removeClass('blur')
+            }
+        })
+      });

@@ -1,0 +1,33 @@
+video {
+    width: 100%    !important;
+    height: auto   !important;
+}
+.bright {
+    -webkit-filter: brightness(150%);
+    filter: brightness(150%);
+}
+.mirror {
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+}
+.none {
+    -webkit-filter: none;
+    filter: none;
+}
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+.grayscale {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+.invert {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+.sepia {
+    -webkit-filter: sepia(1);
+    filter: sepia(1);
+}
