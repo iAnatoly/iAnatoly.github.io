@@ -13,25 +13,25 @@ navigator
     $(function() {
         $('#sepia').change(function() {
             if ($(this).prop('checked')) {
-                $('#mirror').addClass('sepia')
+                $('#sepia-container').addClass('sepia')
             } else {
-                $('#mirror').removeClass('sepia')
+                $('#sepia-container').removeClass('sepia')
             }
         })
 
         $('#night').change(function() {
             if ($(this).prop('checked')) {
-                $('#mirror').addClass('bright')
+                $('#brightness-container').addClass('bright')
             } else {
-                $('#mirror').removeClass('bright')
+                $('#brightness-container').removeClass('bright')
             }
         })
 
         $('#blur').change(function() {
             if ($(this).prop('checked')) {
-                $('#mirror').addClass('blur')
+                $('#blur-container').addClass('blur')
             } else {
-                $('#mirror').removeClass('blur')
+                $('#blur-container').removeClass('blur')
             }
         })
       });
