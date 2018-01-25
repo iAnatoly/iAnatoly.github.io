@@ -22,6 +22,11 @@
                 <div class="col-md-2">
                     <div class="checkbox">
                             <label>
+                                <input id="mirror" checked type="checkbox" data-toggle="toggle">Mirror
+                            </label>
+                    </div>
+                    <div class="checkbox">
+                            <label>
                                 <input id="sepia" type="checkbox" data-toggle="toggle">Sepia
                             </label>
                     </div>
@@ -42,7 +47,9 @@
                     <div id="sepia-container">
                         <div id="blur-container">
                             <div id="brightness-container">
-                                <video id="mirror" class="mirror" autoplay playsinline></video>
+                                <div id="mirror-container" class="mirror">
+                                    <video id="video" autoplay playsinline></video>
+                                </div>
                             </div>
                         </div>
                     </div>

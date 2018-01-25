@@ -2,7 +2,7 @@ navigator
     .mediaDevices
     .getUserMedia({ video: true, audio: false },)
     .then(function(stream){
-        var mirror = document.querySelector('#mirror');
+        var mirror = document.querySelector('#video');
         mirror.srcObject = stream;
         mirror.play();        
     })
@@ -11,6 +11,14 @@ navigator
     });
 
     $(function() {
+        $('#mirror').change(function() {
+            if ($(this).prop('checked')) {
+                $('#mirror-container').addClass('mirror')
+            } else {
+                $('#mirror-container').removeClass('mirror')
+            }
+        })
+
         $('#sepia').change(function() {
             if ($(this).prop('checked')) {
                 $('#sepia-container').addClass('sepia')
