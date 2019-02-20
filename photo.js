@@ -5,7 +5,14 @@
             takepicture();
             ev.preventDefault();
         }, false);
+        document.getElementById('download').addEventListener('click', function(ev){
+            download();
+            ev.preventDefault();
+        }, false);
     };
+
+    function download() {
+    }
 
     function takepicture() {
         var canvas = document.getElementById('canvas');
@@ -23,6 +30,9 @@
     
         var data = canvas.toDataURL('image/png');
         photo.setAttribute('src', data);
+
+        var btn_download = document.getElementById('download');
+        btn_download.style.display = '';
   }
 
   window.addEventListener('load', init, false);
