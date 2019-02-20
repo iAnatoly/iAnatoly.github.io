@@ -2,6 +2,9 @@ video {
     width: 100%    !important;
     height: auto   !important;
 }
+canvas {
+    display:none;
+}
 .bright {
     -webkit-filter: brightness(150%);
     filter: brightness(150%);

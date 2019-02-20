@@ -41,8 +41,8 @@
                                 <input id="blur" type="checkbox" data-toggle="toggle">Blur
                             </label>
                     </div>
-                    <div class="checkbox">
-                            <button type="button" class="btn btn-default">Take photo</button>
+                    <div>
+                            <button id="capture" type="button" class="btn btn-default">Take photo</button>
                     </div>
                     <script>
                     </script>
@@ -62,14 +62,15 @@
                 </div>
             
             </div>
-            <canvas id="canvas" />
+            <canvas id="canvas" > </canvas>
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-10">
-                  <img id="capture" />
+                  <img id="photo" >
                 </div>
             </div>
         </div>
         <script src="mirror.js"></script>
+        <script src="photo.js"></script>
     </body>
 </html>
