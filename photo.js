@@ -11,14 +11,14 @@
         }, false);
     };
 
+    function zero(num) {
+        return num<10 ? '0' + num : num;
+    }
+
     function getDate() {
         var currentdate = new Date();
-        return currentdate.getFullYear()+ 
-            + (currentdate.getMonth()+1) 
-            + currentdate.getDate() + "T"
-            + currentdate.getHours()  
-            + currentdate.getMinutes() 
-            + currentdate.getSeconds();
+        return `${currentdate.getFullYear()}${zero(currentdate.getMonth()+1)}${zero(currentdate.getDate())}T`+
+            `${zero(currentdate.getHours())}${zero(currentdate.getMinutes())}${zero(currentdate.getSeconds())}`;
     }
 
     function downloadUri(name, uri) {
@@ -34,7 +34,7 @@
     function downloadEventHandler() {
         var canvas = document.getElementById('canvas');
         var data = canvas.toDataURL('image/png');
-        downloadUri(`photobooth${getDate()}.png`, data);
+        downloadUri(`photobooth-${getDate()}.png`, data);
     }
     
 
