@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" crossorigin="anonymous">
+        <!--jquery-->
+        <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="></script>>
+        <!--bootstrap -->
+        <link crossorigin="anonymous" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script crossorigin="anonymous" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!--bootstrap-toggle-->
+        <link crossorigin="anonymous" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" >
+        <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+        <!--local references-->
         <link rel="stylesheet" href="mirror.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
-        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">
@@ -20,22 +24,22 @@
                 <div class="col-md-2">
                     <div class="checkbox">
                             <label>
-                                <input id="mirror" checked type="checkbox" data-toggle="toggle">Mirror
+                                <input id="mirror" checked type="checkbox" data-toggle="toggle" data-onstyle="info">Mirror
                             </label>
                     </div>
                     <div class="checkbox">
                             <label>
-                                <input id="sepia" type="checkbox" data-toggle="toggle">Sepia
+                                <input id="sepia" type="checkbox" data-toggle="toggle" data-onstyle="info">Sepia
                             </label>
                     </div>
                     <div class="checkbox">
                             <label>
-                                <input id="night" type="checkbox" data-toggle="toggle">Night
+                                <input id="night" type="checkbox" data-toggle="toggle" data-onstyle="info">Night
                             </label>
                     </div>
                     <div class="checkbox">
                             <label>
-                                <input id="blur" type="checkbox" data-toggle="toggle">Blur
+                                <input id="blur" type="checkbox" data-toggle="toggle" data-onstyle="info">Blur
                             </label>
                     </div>
                     <div>
