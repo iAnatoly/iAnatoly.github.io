@@ -2,7 +2,7 @@
 <html>
     <head>
         <!--jquery-->
-        <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="></script>>
+        <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="></script>
         <!--bootstrap -->
         <link crossorigin="anonymous" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script crossorigin="anonymous" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -22,60 +22,52 @@
             </div>
             <div class="row">
                 <div class="col-md-2">
-                    <div class="checkbox">
-                            <label>
-                                <input id="mirror" checked type="checkbox" data-toggle="toggle" data-onstyle="info">Mirror
-                            </label>
+                    <div class="sticky-top vspaced">
+                        <div class="">
+                                <label>
+                                    <input id="mirror" checked type="checkbox" data-toggle="toggle" data-onstyle="info">Mirror
+                                </label>
+                        </div>
+                        <div class="">
+                                <label>
+                                    <input id="sepia" type="checkbox" data-toggle="toggle" data-onstyle="info">Sepia
+                                </label>
+                        </div>
+                        <div class="">
+                                <label>
+                                    <input id="night" type="checkbox" data-toggle="toggle" data-onstyle="info">Night
+                                </label>
+                        </div>
+                        <div class="">
+                                <label>
+                                    <input id="blur" type="checkbox" data-toggle="toggle" data-onstyle="info">Blur
+                                </label>
+                        </div>
+                        <div class="vspaced">
+                                <button id="capture" type="button" class="btn btn-info">Take photo</button>
+                        </div>
+                        <div class="vspaced">
+                                <button id="download" type="button" class="btn btn-secondary" style="display:none">Download photo</button>
+                        </div>
                     </div>
-                    <div class="checkbox">
-                            <label>
-                                <input id="sepia" type="checkbox" data-toggle="toggle" data-onstyle="info">Sepia
-                            </label>
-                    </div>
-                    <div class="checkbox">
-                            <label>
-                                <input id="night" type="checkbox" data-toggle="toggle" data-onstyle="info">Night
-                            </label>
-                    </div>
-                    <div class="checkbox">
-                            <label>
-                                <input id="blur" type="checkbox" data-toggle="toggle" data-onstyle="info">Blur
-                            </label>
-                    </div>
-                    <div>
-                            <button id="capture" type="button" class="btn btn-default">Take photo</button>
-                    </div>
-                    <div>
-                            <button id="download" type="button" class="btn btn-default" style="display:none">Download photo</button>
-                    </div>
-                    <script>
-                    </script>
                 </div>
                 <div class="col-md-10">
                     <div class="frame round">
-                    <div id="sepia-container">
-                        <div id="blur-container">
-                            <div id="brightness-container">
-                                <div id="mirror-container" class="mirror">
-                                    <video id="video" class="round" autoplay playsinline></video>
+                        <div id="sepia-container">
+                            <div id="blur-container">
+                                <div id="brightness-container">
+                                    <div id="mirror-container" class="mirror">
+                                        <video id="video" class="round" autoplay playsinline></video>
+                                        <canvas id="canvas" > </canvas>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    </div>
+                    <div id="downarrow" class="col-md-10" style="font-size: 50px; text-align:center; display:none">&darr;</div>
+                    <img id="photo" >
                 </div>
             
-            </div>
-            <canvas id="canvas" > </canvas>
-            <div class="row" >
-                <div class="col-md-2"></div>
-                <div id="downarrow" class="col-md-10" style="font-size: 50px; text-align:center; display:none">⇩</div>
-            </div>
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-10">
-                  <img id="photo" >
-                </div>
             </div>
         </div>
         <script src="mirror.js"></script>
