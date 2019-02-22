@@ -37,6 +37,18 @@
         downloadUri(`photobooth-${getDate()}.png`, data);
     }
     
+    function scrollPix(pixels, scrollDuration) {
+        var scrollStep = pixels / (scrollDuration / 10);
+        var windowScrollPrev = window.scrollY -1 ;
+        scrollInterval = setInterval(function(){
+            if (window.scrollY < pixels && window.scrollY!=windowScrollPrev) {
+                windowScrollPrev = window.scrollY;
+                window.scrollBy( 0, scrollStep );
+            } else {
+                clearInterval(scrollInterval);
+            } 
+        },10);
+    }
 
     function takePictureEventHandler() {
         var canvas = document.getElementById('canvas');
@@ -57,7 +69,9 @@
 
         document.getElementById('download').style.display = '';
         document.getElementById('downarrow').style.display = '';
-  }
+
+        scrollPix(photo.offsetTop, 1000);
+    }
 
   window.addEventListener('load', init, false);
 
