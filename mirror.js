@@ -12,6 +12,7 @@
 
         // Bootstrap-toggle forces jquery. Not much I can do here. 
 
+
         $('#mirror').change(function () {
             if ($(this).prop('checked')) {
                 $('#mirror-container').addClass('mirror');
