@@ -45,3 +45,8 @@ canvas {
 .vspaced {
     padding-top: 5px;
 }
+
+.error {
+    color: red;
+    text-align: center;
+}

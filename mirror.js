@@ -1,14 +1,33 @@
 (function() {
+
+    function clearErr() {
+        var errorDiv = document.getElementById('error'); 
+        errorDiv.innerText = '';
+        errorDiv.style.display = 'none';
+    }
+    
+    function showErr(e) {
+        var errorDiv = document.getElementById('error'); 
+        errorDiv.innerText = e;
+        errorDiv.style.display = '';
+    }
+
   
     async function init() { 
 
-        var stream = await navigator
-            .mediaDevices
-            .getUserMedia({ video: true, audio: false });
+        try {
+            var stream = await navigator
+                .mediaDevices
+                .getUserMedia({ video: true, audio: false });
 
-        var mirror = document.getElementById('video');
-        mirror.srcObject = stream;
-        mirror.play();        
+            var mirror = document.getElementById('video');
+            mirror.srcObject = stream;
+            mirror.play();        
+            clearErr(); 
+        } catch (e) {
+            showErr(e);
+        }
+        
 
         // Bootstrap-toggle forces jquery. Not much I can do here. 
 
