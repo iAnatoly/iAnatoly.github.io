@@ -54,15 +54,23 @@
         var canvas = document.getElementById('canvas');
         var video = document.getElementById('video');
         var photo = document.getElementById('photo');
+        var mirrored = document.getElementById('mirror').checked;
 
         var width = video.offsetWidth;
         var height = video.offsetHeight;
 
         canvas.width = width;
         canvas.height = height;
-        var context = canvas.getContext('2d');
 
-        context.drawImage(video, 0, 0, width, height);
+        var context = canvas.getContext('2d');
+       
+        if (mirrored) {
+            context.scale(-1,1);
+            context.drawImage(video, 0, 0, -1*width, height);
+        } else {
+            context.drawImage(video, 0, 0, width, height);
+        }
+
     
         var data = canvas.toDataURL('image/png');
         photo.setAttribute('src', data);
