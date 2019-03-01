@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import photo from './photo';
+
 (function() {
 
     function clearErr() {
@@ -27,6 +30,8 @@
         } catch (e) {
             showErr(e);
         }
+
+        photo();
         
 
         // Bootstrap-toggle forces jquery. Not much I can do here. 
